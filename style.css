@@ -429,7 +429,12 @@ body.nav-open { overflow: hidden; }
 /* ---------- 9. Hero ---------- */
 .hero {
   position: relative;
-  background: linear-gradient(165deg, #0A1E3C 0%, #113059 52%, #0B2140 100%);
+  background-image:
+    linear-gradient(165deg, rgba(8, 18, 38, .90) 0%, rgba(11, 33, 64, .80) 48%, rgba(7, 17, 35, .94) 100%),
+    url('banner.png');
+  background-size: cover;
+  background-position: center 60%;
+  background-repeat: no-repeat;
   color: var(--white);
   padding-block: calc(var(--header-h) + clamp(52px, 8vw, 96px)) clamp(160px, 22vw, 260px);
   overflow: hidden;
@@ -446,16 +451,15 @@ body.nav-open { overflow: hidden; }
   z-index: -1;
   pointer-events: none;
 }
-.hero-grid-lines {
+.hero::after {
+  content: "";
   position: absolute;
-  inset: 0;
-  z-index: -1;
-  opacity: .3;
-  background-image: linear-gradient(rgba(255, 255, 255, .045) 1px, transparent 1px),
-                    linear-gradient(90deg, rgba(255, 255, 255, .045) 1px, transparent 1px);
-  background-size: 78px 78px;
-  -webkit-mask-image: radial-gradient(ellipse at 50% 30%, #000 25%, transparent 78%);
-  mask-image: radial-gradient(ellipse at 50% 30%, #000 25%, transparent 78%);
+  inset-block-end: 0;
+  inset-inline: 0;
+  height: clamp(90px, 16vw, 180px);
+  background: linear-gradient(to bottom, transparent, var(--paper));
+  z-index: 1;
+  pointer-events: none;
 }
 .hero h1 { color: var(--white); max-width: 17ch; }
 .hero h1 em {
@@ -465,19 +469,6 @@ body.nav-open { overflow: hidden; }
 }
 .hero .lede { color: rgba(255, 255, 255, .74); margin-top: 24px; }
 .hero-inner { position: relative; z-index: 2; max-width: 760px; }
-
-/* skyline + waterline sit at the foot of the hero */
-.hero-skyline {
-  position: absolute;
-  inset-block-end: 0;
-  inset-inline: 0;
-  z-index: 1;
-  width: 100%;
-  height: auto;
-  pointer-events: none;
-  color: #08192F;
-}
-.hero-water { position: absolute; inset-block-end: 0; inset-inline: 0; z-index: 1; pointer-events: none; }
 
 .hero-stats {
   position: relative;

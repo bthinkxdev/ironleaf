@@ -1,9 +1,9 @@
 /* ==========================================================================
-   Land Creation Contracting — core stylesheet
+   Ironleaf Trading & Contracting: core stylesheet
    Palette : deep gulf navy, brushed gold, harbour mist
    Type    : Cinzel (engraved display, mirrors the wordmark) + Manrope (body)
              Amiri + Tajawal for Arabic
-   Signature: the wave rule, lifted from the logo's waterline
+   Signature: the wave rule, echoing the logo's gold underline
    ========================================================================== */
 
 /* ---------- 1. Tokens ---------- */
@@ -145,6 +145,8 @@ html[lang="ar"] .eyebrow { letter-spacing: 0; font-size: .85rem; }
 }
 
 .muted { color: var(--muted); }
+/* .muted defaults to a dark-on-light tone; these containers are dark, so lighten it to stay legible */
+.footer .muted, .drawer .muted, .panel .muted { color: rgba(255, 255, 255, .68); }
 
 /* ---------- 4. Layout ---------- */
 .wrap {
@@ -256,38 +258,24 @@ html[dir="rtl"] .btn svg { transform: scaleX(-1); }
 .header.is-solid::after { opacity: 1; }
 
 /* On dark heroes the header text starts white */
-.header.on-dark .brand-name, .header.on-dark .brand-sub { color: var(--white); }
 .header.on-dark .nav a { color: rgba(255, 255, 255, .8); }
 .header.on-dark .lang-btn { color: var(--white); border-color: rgba(255, 255, 255, .28); }
 .header.on-dark .burger span { background: var(--white); }
-.header.on-dark.is-solid .brand-name { color: var(--ink); }
-.header.on-dark.is-solid .brand-sub { color: var(--gold); }
 .header.on-dark.is-solid .nav a { color: var(--ink); }
 .header.on-dark.is-solid .lang-btn { color: var(--ink); border-color: var(--line); }
 .header.on-dark.is-solid .burger span { background: var(--ink); }
 
 .brand { display: flex; align-items: center; gap: 12px; flex: none; }
-.brand-mark { width: 38px; height: 38px; color: var(--ink); flex: none; transition: color .4s var(--ease); }
-.header.on-dark .brand-mark { color: var(--gold-lite); }
-.header.on-dark.is-solid .brand-mark { color: var(--ink); }
-.brand-text { display: flex; flex-direction: column; line-height: 1; }
-.brand-name {
-  font-family: var(--font-display);
-  font-size: clamp(.98rem, 1.5vw, 1.16rem);
-  font-weight: 700;
-  letter-spacing: .06em;
-  color: var(--ink);
-  transition: color .4s var(--ease);
+/* The logo art carries dark ink + gold on a transparent ground, so it
+   needs a light backing to stay legible on the navy header/footer. */
+.brand-logo {
+  display: block;
+  height: 42px;
+  width: auto;
+  background: rgba(255, 255, 255, .94);
+  border-radius: 10px;
+  padding: 5px 12px;
 }
-.brand-sub {
-  font-size: .58rem;
-  letter-spacing: .32em;
-  text-transform: uppercase;
-  color: var(--gold);
-  margin-top: 5px;
-  font-weight: 700;
-}
-html[lang="ar"] .brand-sub { letter-spacing: .05em; font-size: .68rem; }
 
 .nav { display: flex; align-items: center; gap: clamp(16px, 2vw, 30px); }
 .nav a {
@@ -409,7 +397,7 @@ body.nav-open .drawer { transform: translateX(0); visibility: visible; }
 .drawer-foot { margin-top: auto; padding-top: 34px; }
 .drawer-foot .btn { width: 100%; }
 .drawer-contact { margin-top: 24px; display: grid; gap: 8px; font-size: .88rem; color: rgba(255, 255, 255, .62); }
-.drawer-contact a { display: block; }
+.drawer-contact a { display: block; transition: color .3s var(--ease); }
 .drawer-contact a:hover { color: var(--gold-lite); }
 
 .scrim {
@@ -529,6 +517,7 @@ body.nav-open { overflow: hidden; }
   margin-bottom: 18px;
   font-weight: 600;
 }
+.crumbs a { transition: color .3s var(--ease); }
 .crumbs a:hover { color: var(--gold-lite); }
 html[lang="ar"] .crumbs { letter-spacing: 0; text-transform: none; font-size: .85rem; }
 
@@ -664,62 +653,6 @@ html[dir="rtl"] .card:hover .card-link svg { transform: scaleX(-1) translateX(5p
 .ticks li { display: flex; gap: 12px; align-items: flex-start; color: var(--muted); font-size: .96rem; }
 .ticks svg { width: 17px; height: 17px; color: var(--gold); flex: none; margin-top: 4px; }
 
-/* ---------- 12. Sectors ---------- */
-.sector {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  padding: 18px 20px;
-  background: var(--white);
-  border: 1px solid var(--line-soft);
-  border-radius: var(--r);
-  font-weight: 700;
-  font-size: .93rem;
-  color: var(--ink);
-  transition: transform .45s var(--ease), border-color .45s var(--ease), box-shadow .45s var(--ease);
-}
-.sector:hover { transform: translateY(-3px); border-color: var(--gold); box-shadow: var(--shadow-sm); }
-.sector svg { width: 22px; height: 22px; color: var(--gold); flex: none; }
-
-/* ---------- 13. Trade / manpower lists ---------- */
-.trade { padding: clamp(24px, 3vw, 34px); }
-.trade-head {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 14px;
-  padding-bottom: 16px;
-  margin-bottom: 18px;
-  border-bottom: 1px solid var(--line);
-}
-.trade-head h3 { font-size: 1.06rem; }
-.trade-count {
-  font-family: var(--font-display);
-  font-size: .78rem;
-  font-weight: 700;
-  color: var(--gold);
-  letter-spacing: .08em;
-  flex: none;
-}
-.trade-list { columns: 2; column-gap: 24px; }
-.trade-list li {
-  break-inside: avoid;
-  font-size: .9rem;
-  color: var(--muted);
-  padding-block: 6px;
-  display: flex;
-  gap: 9px;
-  align-items: baseline;
-}
-.trade-list li::before {
-  content: "";
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-  background: var(--gold);
-  flex: none;
-  transform: translateY(-2px);
-}
 
 /* ---------- 14. Certification strip ---------- */
 .certs { display: flex; flex-wrap: wrap; gap: 14px; }
@@ -855,6 +788,7 @@ html[dir="rtl"] .field select { background-position: left 16px center; }
 .info-row .k { font-size: .72rem; letter-spacing: .14em; text-transform: uppercase; color: var(--muted-2); font-weight: 700; margin-bottom: 4px; }
 html[lang="ar"] .info-row .k { letter-spacing: 0; text-transform: none; font-size: .82rem; }
 .info-row .v { font-weight: 700; color: var(--ink); font-size: .95rem; line-height: 1.6; word-break: break-word; white-space: pre-line; }
+.info-row .v a { transition: color .3s var(--ease); }
 .info-row .v a:hover { color: var(--gold); }
 
 /* ---------- 17. FAQ / accordion ---------- */
@@ -916,8 +850,6 @@ html[lang="ar"] .footer h4 { letter-spacing: 0; text-transform: none; font-size:
 .footer a { transition: color .3s var(--ease); }
 .footer a:hover { color: var(--gold-lite); }
 .footer-links { display: grid; gap: 12px; font-size: .92rem; }
-.footer .brand-mark { color: var(--gold-lite); }
-.footer .brand-name { color: var(--white); }
 .footer-about { font-size: .93rem; margin-top: 20px; max-width: 38ch; line-height: 1.75; }
 .footer-bottom {
   margin-top: clamp(40px, 5vw, 60px);
@@ -1002,16 +934,13 @@ html[lang="ar"] .footer h4 { letter-spacing: 0; text-transform: none; font-size:
   .hero-stats .lbl { margin-top: 4px; }
   .footer-grid { grid-template-columns: 1fr; }
   .field-row { grid-template-columns: 1fr; gap: 0; }
-  .trade-list { columns: 1; }
   .btn-row .btn { width: 100%; }
   .footer-bottom { justify-content: flex-start; }
   .section-head { margin-bottom: 30px; }
 }
 
 @media (max-width: 400px) {
-  .brand-mark { width: 33px; height: 33px; }
-  .brand-name { font-size: .92rem; }
-  .brand-sub { letter-spacing: .22em; font-size: .53rem; }
+  .brand-logo { height: 34px; padding: 4px 9px; }
   .lang-btn { height: 40px; padding-inline: 12px; }
   .lang-btn span { display: none; }
   .card { padding: 22px; border-radius: var(--r); }

@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Land Creation Contracting — site behaviour
+   Ironleaf Trading & Contrac ing: site behaviour
    1. Language      EN / AR with full RTL mirroring
    2. Navigation    fixed header states + mobile drawer
    3. Motion        scroll reveals (skipped when reduced motion is requested)
@@ -156,9 +156,13 @@
   }
 
   /* ======================================================================
-     4c. Enquiry form — front-end only, so it confirms and hands over
+     4c. Enquiry form: front-end only, so it confirms and hands over
          the mailbox instead of pretending a message was sent.
+     CONTACT_EMAIL is blank until the business shares an inbox to use;
+     until then the form points people to the phone number instead.
      ====================================================================== */
+  var CONTACT_EMAIL = '';
+  var CONTACT_PHONE = '+974 3001 3636';
   var form = doc.querySelector('#enquiry-form');
   if (form) {
     form.addEventListener('submit', function (e) {
@@ -176,17 +180,27 @@
         'Service: ' + (data.get('service') || ''),
         'Requirement:',
         (data.get('message') || '')
-      ].join('\n');
+      ].join('\n'); 
+
+      if (!CONTACT_EMAIL) {
+        if (status) {
+          status.textContent = isAr
+            ? 'شكرًا لك' + (name ? ' يا ' + name : '') + '. يُرجى الاتصال بنا على ' + CONTACT_PHONE + ' لإتمام طلبك.'
+            : 'Thanks' + (name ? ', ' + name : '') + '. Please call us on ' + CONTACT_PHONE + ' to complete your enquiry.';
+          status.classList.add('is-visible');
+        }
+        return;
+      }
 
       if (status) {
         status.textContent = isAr
-          ? 'شكرًا لك' + (name ? ' يا ' + name : '') + '. سيفتح برنامج البريد لديك برسالة جاهزة — أرسلها وسنرد خلال يوم عمل واحد.'
-          : 'Thanks' + (name ? ', ' + name : '') + '. Your mail app will open with this enquiry ready to send. We reply within one working day.';
+          ? 'شكرًا لك' + (name ? ' يا ' + name : '') + '. سيفتح برنامج البريد لديك برسالة جاهزة.'
+          : 'Thanks' + (name ? ', ' + name : '') + '. Your mail app will open with this enquiry ready to send.';
         status.classList.add('is-visible');
       }
 
-      window.location.href = 'mailto:info@landcreationcontracting.com'
-        + '?subject=' + encodeURIComponent('Enquiry — ' + (data.get('service') || 'Land Creation Contracting'))
+      window.location.href = 'mailto:' + CONTACT_EMAIL
+        + '?subject=' + encodeURIComponent('Enquiry: ' + (data.get('service') || 'Ironleaf Trading & Contracting'))
         + '&body=' + encodeURIComponent(body);
     });
   }

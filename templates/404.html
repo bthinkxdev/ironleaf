@@ -1,0 +1,46 @@
+{% load static %}<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0B2140">
+<meta name="robots" content="noindex">
+<link rel="icon" type="image/png" sizes="48x48" href="{% static 'img/favicon.png' %}">
+<link rel="apple-touch-icon" href="{% static 'img/apple-touch-icon.png' %}">
+<title data-en="Page not found | Ironleaf Trading &amp; Contracting" data-ar="الصفحة غير موجودة | آيرون ليف للتجارة والمقاولات">Page not found | Ironleaf Trading &amp; Contracting</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&family=Amiri:wght@400;700&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+<noscript><style>.reveal{opacity:1!important;transform:none!important}.lang-btn{display:none}</style></noscript>
+</head>
+<body>
+
+<header class="header on-dark">
+  <div class="wrap">
+    <a class="brand" href="/" aria-label="Ironleaf Trading &amp; Contracting, home">
+      <img class="brand-logo" src="{% static 'img/logo.png' %}" width="640" height="458" decoding="async" alt="Ironleaf Trading &amp; Contracting">
+    </a>
+    <div class="header-actions">
+      <button class="lang-btn" type="button" aria-label="Switch to Arabic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18 15 15 0 0 1 0-18z"/></svg><span data-en="العربية" data-ar="English">العربية</span></button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+<section class="page-hero" style="min-height:70vh;display:flex;align-items:center">
+  <div class="wrap">
+    <span class="eyebrow" data-en="Error 404" data-ar="خطأ 404">Error 404</span>
+    <h1 class="display" data-en="Page not found" data-ar="الصفحة غير موجودة">Page not found</h1>
+    <p class="lede" data-en="The page you are looking for has moved or does not exist. You can head back home or get in touch and we will help." data-ar="الصفحة التي تبحث عنها انتقلت أو غير موجودة. يمكنك العودة إلى الرئيسية أو التواصل معنا وسنساعدك.">The page you are looking for has moved or does not exist. You can head back home or get in touch and we will help.</p>
+    <div class="btn-row">
+      <a class="btn btn--gold" href="/" data-en="Back to home" data-ar="العودة إلى الرئيسية">Back to home</a>
+      <a class="btn btn--ghost" href="/contact/" data-en="Contact us" data-ar="اتصل بنا">Contact us</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<script src="{% static 'js/main.js' %}"></script>
+</body>
+</html>

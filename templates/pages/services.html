@@ -1,0 +1,100 @@
+{% extends "base.html" %}
+{% load static %}
+{% block meta %}
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Ironleaf Trading &amp; Contracting">
+<meta property="og:title" content="Services | Ironleaf Trading &amp; Contracting">
+<meta property="og:description" content="Trading and contracting services from Ironleaf Trading &amp; Contracting in Qatar.">
+<meta name="twitter:card" content="summary">
+<title data-en="Services | Ironleaf Trading &amp; Contracting" data-ar="خدماتنا | آيرون ليف للتجارة والمقاولات">Services | Ironleaf Trading &amp; Contracting</title>
+<meta name="description" content="Trading and contracting services from Ironleaf Trading &amp; Contracting in Qatar.">
+{% endblock %}
+{% block content %}
+<section class="page-hero">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <a href="{% url 'pages:home' %}" data-en="Home" data-ar="الرئيسية">Home</a><span>/</span><span data-en="Services" data-ar="خدماتنا">Services</span>
+    </nav>
+    <h1 class="display" data-en="Trading and contracting, done properly" data-ar="التجارة والمقاولات، بالشكل الصحيح">Trading and contracting, done properly</h1>
+    <p class="lede" data-en="Two disciplines under one accountable team, the same standard whether you need products, a project delivered, or both." data-ar="مجالان تحت فريق واحد مسؤول، بالمعيار نفسه سواء احتجت منتجات أو تنفيذ مشروع أو كليهما.">Two disciplines under one accountable team, the same standard whether you need products, a project delivered, or both.</p>
+  </div>
+  <svg class="page-hero-wave" viewBox="0 0 1440 70" preserveAspectRatio="none" aria-hidden="true"><path d="M0 44c180-34 340 20 520 12s300-38 470-22 260 34 450 16v22H0z" fill="currentColor"/></svg>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="split" id="trading" style="margin-bottom:clamp(56px,7vw,104px);scroll-margin-top:var(--header-h)">
+      <div class="reveal">
+        <svg class="wave-rule" viewBox="0 0 92 12" aria-hidden="true"><path d="M1 5c8-5 15 5 23 0s15 5 23 0 15 5 23 0 15 5 21 0"/><path d="M1 10c8-5 15 5 23 0s15 5 23 0 15 5 23 0 15 5 21 0"/></svg>
+        <span class="eyebrow" data-en="Service 01" data-ar="الخدمة 01">Service 01</span>
+        <h2 class="display" data-en="Trading" data-ar="التجارة">Trading</h2>
+        <p class="lede" style="margin-top:16px" data-en="We supply quality products through reliable trading solutions, competitively sourced and consistently delivered, so your business or project gets what it needs, when it needs it." data-ar="نوفّر منتجات عالية الجودة من خلال حلول تجارية موثوقة، تُورَّد بأسعار تنافسية وتسليم متّسق، ليحصل عملك أو مشروعك على ما يحتاجه في الوقت المناسب.">We supply quality products through reliable trading solutions, competitively sourced and consistently delivered, so your business or project gets what it needs, when it needs it.</p>
+      </div>
+      <div class="split-media reveal" data-delay="1">
+        <div class="panel">
+          <h3 data-en="What we supply" data-ar="ما نوفّره">What we supply</h3>
+          <ul class="panel-list" style="margin-top:22px"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span data-en="Building and construction materials" data-ar="مواد البناء والإنشاءات">Building and construction materials</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span data-en="Electrical and plumbing supplies" data-ar="المستلزمات الكهربائية والسباكة">Electrical and plumbing supplies</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span data-en="Safety equipment and PPE" data-ar="معدات السلامة ومستلزمات الوقاية">Safety equipment and PPE</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span data-en="Tools and site equipment" data-ar="الأدوات ومعدات الموقع">Tools and site equipment</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span data-en="Office and facility supplies" data-ar="مستلزمات المكاتب والمرافق">Office and facility supplies</span></li></ul>
+        </div>
+      </div>
+    </div>
+    <div class="split split--reverse" id="contracting" style="margin-bottom:clamp(56px,7vw,104px);scroll-margin-top:var(--header-h)">
+      <div class="reveal">
+        <svg class="wave-rule" viewBox="0 0 92 12" aria-hidden="true"><path d="M1 5c8-5 15 5 23 0s15 5 23 0 15 5 23 0 15 5 21 0"/><path d="M1 10c8-5 15 5 23 0s15 5 23 0 15 5 23 0 15 5 21 0"/></svg>
+        <span class="eyebrow" data-en="Service 02" data-ar="الخدمة 02">Service 02</span>
+        <h2 class="display" data-en="Contracting" data-ar="المقاولات">Contracting</h2>
+        <p class="lede" style="margin-top:16px" data-en="We deliver contracting projects with integrity, efficiency and safety, managed by a team that stays accountable from scope to handover." data-ar="ننفّذ مشاريع المقاولات بنزاهة وكفاءة وسلامة، يديرها فريق يبقى مسؤولًا من تحديد النطاق حتى التسليم.">We deliver contracting projects with integrity, efficiency and safety, managed by a team that stays accountable from scope to handover.</p>
+      </div>
+      <div class="split-media reveal" data-delay="1">
+        <div class="panel">
+          <h3 data-en="What we deliver" data-ar="ما ننفّذه">What we deliver</h3>
+          <ul class="panel-list" style="margin-top:22px"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span data-en="Civil and building works" data-ar="أعمال الإنشاء والمباني المدنية">Civil and building works</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span data-en="Interior fit-out and finishing" data-ar="التشطيبات والديكورات الداخلية">Interior fit-out and finishing</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span data-en="Renovation and refurbishment" data-ar="أعمال التجديد والترميم">Renovation and refurbishment</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span data-en="Maintenance and repair works" data-ar="أعمال الصيانة والإصلاح">Maintenance and repair works</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span data-en="Site management and safety supervision" data-ar="إدارة المواقع والإشراف على السلامة">Site management and safety supervision</span></li></ul>
+        </div>
+      </div>
+    </div></div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head is-centered">
+      <svg class="wave-rule" viewBox="0 0 92 12" aria-hidden="true"><path d="M1 5c8-5 15 5 23 0s15 5 23 0 15 5 23 0 15 5 21 0"/><path d="M1 10c8-5 15 5 23 0s15 5 23 0 15 5 23 0 15 5 21 0"/></svg>
+      <span class="eyebrow" data-en="Questions" data-ar="أسئلة">Questions</span>
+      <h2 class="display" data-en="Asked before the first order" data-ar="تُطرح قبل أول طلب">Asked before the first order</h2>
+    </div>
+    <div style="max-width:840px;margin-inline:auto">
+      <div class="acc reveal">
+        <button class="acc-btn" type="button" aria-expanded="false"><span data-en="What does Ironleaf Trading &amp; Contracting do?" data-ar="بماذا تقوم آيرون ليف للتجارة والمقاولات؟">What does Ironleaf Trading &amp; Contracting do?</span><i aria-hidden="true"></i></button>
+        <div class="acc-panel"><div data-en="We deliver high-quality products through reliable trading solutions, and professional contracting services for projects, with integrity, efficiency, safety and a commitment to excellence." data-ar="نقدّم منتجات عالية الجودة من خلال حلول تجارية موثوقة، وخدمات مقاولات احترافية للمشاريع، بنزاهة وكفاءة وسلامة والتزام بالتميز.">We deliver high-quality products through reliable trading solutions, and professional contracting services for projects, with integrity, efficiency, safety and a commitment to excellence.</div></div>
+      </div>
+      <div class="acc reveal">
+        <button class="acc-btn" type="button" aria-expanded="false"><span data-en="Which areas do you serve?" data-ar="ما المناطق التي تخدمونها؟">Which areas do you serve?</span><i aria-hidden="true"></i></button>
+        <div class="acc-panel"><div data-en="We are based in Qatar and take on trading and contracting requirements across the country." data-ar="مقرّنا في قطر ونستقبل طلبات التجارة والمقاولات في جميع أنحائها.">We are based in Qatar and take on trading and contracting requirements across the country.</div></div>
+      </div>
+      <div class="acc reveal">
+        <button class="acc-btn" type="button" aria-expanded="false"><span data-en="How do I request a quote?" data-ar="كيف أطلب عرض سعر؟">How do I request a quote?</span><i aria-hidden="true"></i></button>
+        <div class="acc-panel"><div data-en="Send your requirement through the contact form or call us directly, and our team will get back to you." data-ar="أرسل متطلبك عبر نموذج التواصل أو اتصل بنا مباشرة، وسيتواصل معك فريقنا.">Send your requirement through the contact form or call us directly, and our team will get back to you.</div></div>
+      </div>
+      <div class="acc reveal">
+        <button class="acc-btn" type="button" aria-expanded="false"><span data-en="Where are you located?" data-ar="أين موقعكم؟">Where are you located?</span><i aria-hidden="true"></i></button>
+        <div class="acc-panel"><div data-en="Building 92, Street 631, Zone 74, Qatar. Open the map on our Contact page for directions." data-ar="مبنى 92، شارع 631، المنطقة 74، قطر. افتح الخريطة في صفحة اتصل بنا للحصول على الاتجاهات.">Building 92, Street 631, Zone 74, Qatar. Open the map on our Contact page for directions.</div></div>
+      </div>
+      <div class="acc reveal">
+        <button class="acc-btn" type="button" aria-expanded="false"><span data-en="How can I reach you quickly?" data-ar="كيف أتواصل معكم بسرعة؟">How can I reach you quickly?</span><i aria-hidden="true"></i></button>
+        <div class="acc-panel"><div data-en="Call +974 3001 3636 or message us on WhatsApp at +974 6686 1283." data-ar="اتصل على +974 3001 3636 أو راسلنا عبر واتساب على +974 6686 1283.">Call +974 3001 3636 or message us on WhatsApp at +974 6686 1283.</div></div>
+      </div></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="cta-band reveal">
+      <span class="eyebrow" data-en="Scope it with us" data-ar="لنحدد النطاق معًا">Scope it with us</span>
+      <h2 class="display" data-en="Send the details and we will price it properly" data-ar="أرسل التفاصيل وسنسعّرها بدقة">Send the details and we will price it properly</h2>
+      <p class="lede" data-en="Products needed, a project brief, or three lines in an email, all workable. You get a clear quote back." data-ar="منتجات مطلوبة، أو ملخص مشروع، أو ثلاثة أسطر في بريد إلكتروني… كلها كافية. ستحصل على عرض سعر واضح.">Products needed, a project brief, or three lines in an email, all workable. You get a clear quote back.</p>
+      <div class="btn-row">
+        <a class="btn btn--gold" href="{% url 'contact:contact' %}" data-en="Send your requirement" data-ar="أرسل متطلباتك">Send your requirement</a>
+        <a class="btn btn--ghost" href="tel:+97430013636" data-en="Call +974 3001 3636" data-ar="اتصل على +974 3001 3636">Call +974 3001 3636</a>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

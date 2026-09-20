@@ -1,58 +1,30 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="theme-color" content="#0B2140">
+{% extends "base.html" %}
+{% load static %}
+{% block meta %}
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Ironleaf Trading &amp; Contracting">
+<meta property="og:title" content="Ironleaf Trading &amp; Contracting | Trading &amp; Contracting in Qatar">
+<meta property="og:description" content="Quality products, reliable trading solutions and professional contracting services in Qatar.">
+<meta name="twitter:card" content="summary">
 <title data-en="Ironleaf Trading &amp; Contracting | Trading &amp; Contracting in Qatar" data-ar="آيرون ليف للتجارة والمقاولات | التجارة والمقاولات في قطر">Ironleaf Trading &amp; Contracting | Trading & Contracting in Qatar</title>
 <meta name="description" content="Quality products, reliable trading solutions and professional contracting services in Qatar.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&family=Amiri:wght@400;700&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-<a class="skip" href="#main" data-en="Skip to content" data-ar="تخطَّ إلى المحتوى">Skip to content</a>
-<header class="header on-dark">
-  <div class="wrap">
-    <a class="brand" href="index.html" aria-label="Ironleaf Trading &amp; Contracting, home">
-      <img class="brand-logo" src="IronleaLogoPNG.png" alt="Ironleaf Trading &amp; Contracting">
-    </a>
-    <nav class="nav" aria-label="Primary"><a href="index.html" aria-current="page" data-en="Home" data-ar="الرئيسية">Home</a><a href="about.html" data-en="About us" data-ar="من نحن">About us</a><a href="services.html" data-en="Services" data-ar="خدماتنا">Services</a><a href="trading.html" data-en="Trading" data-ar="التجارة">Trading</a><a href="contact.html" data-en="Contact" data-ar="اتصل بنا">Contact</a></nav>
-    <div class="header-actions">
-      <button class="lang-btn" type="button" aria-label="Switch to Arabic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18 15 15 0 0 1 0-18z"/></svg><span data-en="العربية" data-ar="English">العربية</span></button>
-      <a class="btn btn--gold header-cta" href="contact.html" data-en="Request a quote" data-ar="اطلب عرض سعر">Request a quote</a>
-      <button class="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="drawer">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </div>
-</header>
-
-<div class="scrim" aria-hidden="true"></div>
-<aside class="drawer" id="drawer" aria-label="Menu">
-  <nav class="drawer-nav"><a href="index.html" aria-current="page"><span data-en="Home" data-ar="الرئيسية">Home</span><span>01</span></a><a href="about.html"><span data-en="About us" data-ar="من نحن">About us</span><span>02</span></a><a href="services.html"><span data-en="Services" data-ar="خدماتنا">Services</span><span>03</span></a><a href="trading.html"><span data-en="Trading" data-ar="التجارة">Trading</span><span>04</span></a><a href="contact.html"><span data-en="Contact" data-ar="اتصل بنا">Contact</span><span>05</span></a></nav>
-  <div class="drawer-foot">
-    <a class="btn btn--gold" href="contact.html" data-en="Request a quote" data-ar="اطلب عرض سعر">Request a quote</a>
-    <div class="drawer-contact">
-      <a href="tel:+97430013636">+974 3001 3636</a>
-      <span class="muted" data-en="[Email not shared]" data-ar="[البريد الإلكتروني غير متوفر]">[Email not shared]</span>
-    </div>
-  </div>
-</aside>
-
-<main id="main">
-
+{% verbatim %}<script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"Ironleaf Trading & Contracting","slogan":"Building Trust. Delivering Excellence.","foundingDate":"2026","identifier":"CR 247549","telephone":["+97430013636","+97466861283"],"address":{"@type":"PostalAddress","streetAddress":"Building 92, Street 631, Zone 74","addressCountry":"QA"},"geo":{"@type":"GeoCoordinates","latitude":25.671340942382812,"longitude":51.49483108520508},"hasMap":"https://www.google.com/maps?q=25.671340942382812,51.49483108520508&z=17&hl=en"}</script>{% endverbatim %}
+<link rel="preload" as="image" href="{% static 'img/hero-poster.jpg' %}">
+{% endblock %}
+{% block content %}
 <section class="hero">
+  <video class="hero-video" autoplay muted loop playsinline preload="auto" poster="{% static 'img/hero-poster.jpg' %}" aria-hidden="true" tabindex="-1">
+    <source src="{% static 'video/hero.mp4' %}" type="video/mp4">
+  </video>
+  <div class="hero-overlay" aria-hidden="true"></div>
   <div class="wrap">
     <div class="hero-inner">
       <span class="eyebrow" data-en="Qatar · Est. 2026" data-ar="قطر · تأسست 2026">Qatar · Est. 2026</span>
       <h1 class="display"><span data-en="Building trust," data-ar="بناء الثقة،">Building trust,</span><em data-en="delivering excellence, in Qatar." data-ar="وتقديم التميز، في قطر.">delivering excellence, in Qatar.</em></h1>
       <p class="lede" data-en="Ironleaf Trading &amp; Contracting supplies quality products and delivers professional contracting services, built on integrity, safety and consistent performance." data-ar="توفّر آيرون ليف للتجارة والمقاولات منتجات عالية الجودة وتقدّم خدمات مقاولات احترافية، قائمة على النزاهة والسلامة والأداء المتّسق.">Ironleaf Trading &amp; Contracting supplies quality products and delivers professional contracting services, built on integrity, safety and consistent performance.</p>
       <div class="btn-row">
-        <a class="btn btn--gold" href="contact.html" data-en="Request a quote" data-ar="اطلب عرض سعر">Request a quote<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        <a class="btn btn--ghost" href="services.html" data-en="See what we do" data-ar="تعرّف على خدماتنا">See what we do</a>
+        <a class="btn btn--gold" href="{% url 'contact:contact' %}" data-en="Request a quote" data-ar="اطلب عرض سعر">Request a quote<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="btn btn--ghost" href="{% url 'pages:services' %}" data-en="See what we do" data-ar="تعرّف على خدماتنا">See what we do</a>
       </div>
       <div class="hero-stats">
         <div><span class="num">2026</span><span class="lbl" data-en="Established in Qatar" data-ar="تأسست في قطر">Established in Qatar</span></div>
@@ -72,13 +44,13 @@
       <p class="lede" data-en="We deliver high-quality products, reliable trading solutions and professional contracting services, with integrity, efficiency, safety and a commitment to excellence." data-ar="نقدّم منتجات عالية الجودة وحلولًا تجارية موثوقة وخدمات مقاولات احترافية، بنزاهة وكفاءة وسلامة والتزام بالتميز.">We deliver high-quality products, reliable trading solutions and professional contracting services, with integrity, efficiency, safety and a commitment to excellence.</p>
     </div>
     <div class="grid g-2">
-      <a class="card reveal" data-delay="0" href="services.html#trading">
+      <a class="card reveal" data-delay="0" href="{% url 'pages:services' %}#trading">
         <span class="card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8l-9-5-9 5 9 5 9-5z"/><path d="M3 8v8l9 5 9-5V8"/><path d="M12 13v8"/></svg></span>
         <h3 data-en="Trading" data-ar="التجارة">Trading</h3>
         <p data-en="Quality products, competitively sourced and reliably supplied, with transparent pricing and dependable delivery." data-ar="منتجات عالية الجودة، تُورَّد بأسعار تنافسية وتوريد موثوق، مع أسعار شفافة وتسليم يمكن الاعتماد عليه.">Quality products, competitively sourced and reliably supplied, with transparent pricing and dependable delivery.</p>
         <span class="card-link"><span data-en="Explore" data-ar="اعرف المزيد">Explore</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
       </a>
-      <a class="card reveal" data-delay="1" href="services.html#contracting">
+      <a class="card reveal" data-delay="1" href="{% url 'pages:services' %}#contracting">
         <span class="card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M6 21V8l6-5 6 5v13"/><path d="M10 21v-6h4v6"/><path d="M9 11h6"/></svg></span>
         <h3 data-en="Contracting" data-ar="المقاولات">Contracting</h3>
         <p data-en="Projects delivered with integrity, safety and consistent performance, from a team that stays accountable start to finish." data-ar="مشاريع تُنفَّذ بنزاهة وسلامة وأداء متّسق، من فريق يبقى مسؤولًا من البداية حتى التسليم.">Projects delivered with integrity, safety and consistent performance, from a team that stays accountable start to finish.</p>
@@ -96,7 +68,7 @@
         <h2 class="display" data-en="Quality, delivered with integrity" data-ar="الجودة، بنزاهة">Quality, delivered with integrity</h2>
         <p class="lede" data-en="We strive to build long-term partnerships through dependable service, competitive solutions and consistent performance, the same standard whether you need products, a project delivered, or both." data-ar="نسعى لبناء شراكات طويلة الأمد من خلال خدمة يمكن الاعتماد عليها وحلول تنافسية وأداء متّسق، بالمعيار نفسه سواء احتجت منتجات أو تنفيذ مشروع أو كليهما.">We strive to build long-term partnerships through dependable service, competitive solutions and consistent performance, the same standard whether you need products, a project delivered, or both.</p>
         <div class="btn-row">
-          <a class="btn btn--ink" href="about.html" data-en="About the company" data-ar="عن الشركة">About the company<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <a class="btn btn--ink" href="{% url 'pages:about' %}" data-en="About the company" data-ar="عن الشركة">About the company<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         </div>
       </div>
       <div class="split-media reveal" data-delay="1">
@@ -146,6 +118,28 @@
   </div>
 </section>
 
+<section class="section section--tight">
+  <div class="wrap">
+    <div class="split">
+      <div class="reveal">
+        <svg class="wave-rule" viewBox="0 0 92 12" aria-hidden="true"><path d="M1 5c8-5 15 5 23 0s15 5 23 0 15 5 23 0 15 5 21 0"/><path d="M1 10c8-5 15 5 23 0s15 5 23 0 15 5 23 0 15 5 21 0"/></svg>
+        <span class="eyebrow" data-en="Visit us" data-ar="زورونا">Visit us</span>
+        <h2 class="display" data-en="Find us in Qatar" data-ar="موقعنا في قطر">Find us in Qatar</h2>
+        <p class="lede" data-en="Building 92, Street 631, Zone 74, Qatar. Call us, message us on WhatsApp, or find us on the map." data-ar="مبنى 92، شارع 631، المنطقة 74، قطر. اتصل بنا أو راسلنا عبر واتساب أو ابحث عنا على الخريطة.">Building 92, Street 631, Zone 74, Qatar. Call us, message us on WhatsApp, or find us on the map.</p>
+        <div class="btn-row">
+          <a class="btn btn--ink" href="https://www.google.com/maps?q=25.671340942382812,51.49483108520508&amp;z=17&amp;hl=en" target="_blank" rel="noopener" data-en="Get directions" data-ar="احصل على الاتجاهات">Get directions<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <a class="btn btn--outline" href="https://wa.me/97466861283" target="_blank" rel="noopener" data-en="Message on WhatsApp" data-ar="راسلنا على واتساب">Message on WhatsApp</a>
+        </div>
+      </div>
+      <div class="split-media reveal" data-delay="1">
+        <div class="map-card">
+          <iframe title="Ironleaf Trading &amp; Contracting on Google Maps" src="https://www.google.com/maps?q=25.671340942382812,51.49483108520508&amp;z=17&amp;hl=en&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="section">
   <div class="wrap">
     <div class="cta-band reveal">
@@ -153,54 +147,10 @@
       <h2 class="display" data-en="Tell us what you need: products, a project, or both" data-ar="أخبرنا بما تحتاجه: منتجات، مشروع، أو كليهما">Tell us what you need: products, a project, or both</h2>
       <p class="lede" data-en="Send it in a line and we will come back with a clear quote." data-ar="أرسلها في سطر واحد وسنعود إليك بعرض سعر واضح.">Send it in a line and we will come back with a clear quote.</p>
       <div class="btn-row">
-        <a class="btn btn--gold" href="contact.html" data-en="Send your requirement" data-ar="أرسل متطلباتك">Send your requirement</a>
+        <a class="btn btn--gold" href="{% url 'contact:contact' %}" data-en="Send your requirement" data-ar="أرسل متطلباتك">Send your requirement</a>
         <a class="btn btn--ghost" href="tel:+97430013636" data-en="Call +974 3001 3636" data-ar="اتصل على +974 3001 3636">Call +974 3001 3636</a>
       </div>
     </div>
   </div>
 </section>
-
-</main>
-
-<footer class="footer">
-  <div class="wrap">
-    <div class="footer-grid">
-      <div>
-        <a class="brand" href="index.html">
-          <img class="brand-logo" src="IronleaLogoPNG.png" alt="Ironleaf Trading &amp; Contracting">
-        </a>
-        <p class="footer-about" data-en="Trading and contracting solutions for projects across Qatar. Building Trust. Delivering Excellence." data-ar="حلول تجارية ومقاولات للمشاريع في قطر. بناء الثقة، وتقديم التميز.">Trading and contracting solutions for projects across Qatar. Building Trust. Delivering Excellence.</p>
-        <div class="footer-social">
-          <a href="https://wa.me/97430013636" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm0 2a8 8 0 1 1-4.1 14.9l-.3-.2-2.6.7.7-2.5-.2-.3A8 8 0 0 1 12 4zm-3 4c-.2 0-.5.1-.7.4-.3.3-.9.8-.9 2s.9 2.3 1 2.5c.1.2 1.7 2.8 4.3 3.8 2.1.8 2.5.7 3 .6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2l-.6-.3-1.6-.8c-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.6 6.6 0 0 1-3.3-2.9c-.1-.2 0-.4.1-.5l.5-.6.2-.4v-.4l-.7-1.7c-.2-.4-.4-.4-.6-.4z"/></svg></a>
-          <a href="https://www.linkedin.com" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.1c.5-1 1.8-2 3.7-2 4 0 4.7 2.5 4.7 5.8V21h-4v-5.6c0-1.3 0-3-1.9-3s-2.2 1.4-2.2 2.9V21H9z"/></svg></a>
-          <a href="https://www.instagram.com" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg></a>
-        </div>
-      </div>
-      <div>
-        <h4 data-en="Pages" data-ar="الصفحات">Pages</h4>
-        <nav class="footer-links"><a href="index.html" data-en="Home" data-ar="الرئيسية">Home</a><a href="about.html" data-en="About us" data-ar="من نحن">About us</a><a href="services.html" data-en="Services" data-ar="خدماتنا">Services</a><a href="trading.html" data-en="Trading" data-ar="التجارة">Trading</a><a href="contact.html" data-en="Contact" data-ar="اتصل بنا">Contact</a></nav>
-      </div>
-      <div>
-        <h4 data-en="Services" data-ar="الخدمات">Services</h4>
-        <nav class="footer-links"><a href="services.html#trading" data-en="Trading" data-ar="التجارة">Trading</a><a href="services.html#contracting" data-en="Contracting" data-ar="المقاولات">Contracting</a></nav>
-      </div>
-      <div>
-        <h4 data-en="Get in touch" data-ar="تواصل معنا">Get in touch</h4>
-        <div class="footer-links">
-          <span data-en="[Office address not shared]" data-ar="[العنوان غير متوفر]">[Office address not shared]</span>
-          <span class="muted" data-en="[Email not shared]" data-ar="[البريد الإلكتروني غير متوفر]">[Email not shared]</span>
-          <a href="tel:+97430013636">+974 3001 3636</a>
-        </div>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p><span data-en="©" data-ar="©">&copy;</span> <span class="js-year">2026</span> <span data-en="Ironleaf Trading &amp; Contracting. All rights reserved." data-ar="آيرون ليف للتجارة والمقاولات. جميع الحقوق محفوظة.">Ironleaf Trading &amp; Contracting. All rights reserved.</span></p>
-      <p data-en="Qatar" data-ar="قطر">Qatar</p>
-    </div>
-  </div>
-</footer>
-
-<button class="to-top" type="button" aria-label="Back to top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M6 11l6-6 6 6"/></svg></button>
-<script src="main.js"></script>
-</body>
-</html>
+{% endblock %}
